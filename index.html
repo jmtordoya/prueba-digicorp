@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div#grid_container{
+            width:500px;
+            margin:0px auto;
+            height:400px;
+        }
+        div#grid_container > div{
+            position:absolute;
+            width: 50px;
+            border: #000 1px solid;
+        }
+        div#grid_container > div:nth-child(2n+0) {
+            background: #FFDC64;
+        }
+        div#grid_container > div:nth-child(2n+1) {
+            background: #FFDC64;
+        }
+        div#grid_container > div > div{ padding: 20px; font-size: 27px; color:#D9A800; }
+        </style>
+        <script>
+            function renderGrid(){
+                var blocks = document.getElementById("grid_container").children;
+                var pad = 8, cols = 10, newleft, newtop;
+                for(var i = 1; i < blocks.length; i++){
+                    if (i % cols == 0) {
+                        newtop = (blocks[i-cols].offsetTop + blocks[i-cols].offsetHeight) + pad;
+                        blocks[i].style.top = newtop+"px";
+                    } else {
+                        if(blocks[i-cols]){
+                            newtop = (blocks[i-cols].offsetTop + blocks[i-cols].offsetHeight) + pad;
+                            blocks[i].style.top = newtop+"px";
+                        }
+                        newleft = (blocks[i-1].offsetLeft + blocks[i-1].offsetWidth) + pad;
+                        blocks[i].style.left = newleft+"px";	
+                    }
+                }
+            }
+            window.addEventListener("load", renderGrid, false);
+            window.addEventListener("resize", renderGrid, false);
+        </script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="grid_container" >
+        <div style="height:50px;"> <div>1</div> </div>
+        <div style="height:50px;"> <div>2</div> </div>
+        <div style="height:50px;"> <div>3</div> </div>
+        <div style="height:50px;"> <div>4</div> </div>
+        <div style="height:50px;"> <div>5</div> </div>
+        <div style="height:50px;"> <div>6</div> </div>
+        <div style="height:50px;"> <div>7</div> </div>
+        <div style="height:50px;"> <div>8</div> </div>
+        <div style="height:50px;"> <div>9</div> </div>
+        <div style="height:50px;"> <div>10</div> </div>
+        <div style="height:50px;"> <div>11</div> </div>
+        <div style="height:50px;"> <div>12</div> </div>
+        <div style="height:50px;"> <div>13</div> </div>
+        <div style="height:50px;"> <div>14</div> </div>
+        <div style="height:50px;"> <div>15</div> </div>
+        <div style="height:50px;"> <div>16</div> </div>
+        <div style="height:50px;"> <div>17</div> </div>
+        <div style="height:50px;"> <div>18</div> </div>
+        <div style="height:50px;"> <div>19</div> </div>
+        <div style="height:50px;"> <div>20</div> </div>
+        <div style="height:50px;"> <div>21</div> </div>
+        <div style="height:50px;"> <div>22</div> </div>
+        <div style="height:50px;"> <div>23</div> </div>
+        <div style="height:50px;"> <div>24</div> </div>
+        <div style="height:50px;"> <div>25</div> </div>
+        <div style="height:50px;"> <div>26</div> </div>
+        <div style="height:50px;"> <div>27</div> </div>
+        <div style="height:50px;"> <div>28</div> </div>
+        <div style="height:50px;"> <div>29</div> </div>
+        <div style="height:50px;"> <div>30</div> </div>
+        <div style="height:50px;"> <div>31</div> </div>
+        <div style="height:50px;"> <div>32</div> </div>
+        <div style="height:50px;"> <div>33</div> </div>
+        <div style="height:50px;"> <div>34</div> </div>
+        <div style="height:50px;"> <div>35</div> </div>
+        <div style="height:50px;"> <div>36</div> </div>
+        <div style="height:50px;"> <div>37</div> </div>
+        <div style="height:50px;"> <div>38</div> </div>
+        <div style="height:50px;"> <div>39</div> </div>
+        <div style="height:50px;"> <div>40</div> </div>
+        <div style="height:50px;"> <div>41</div> </div>
+        <div style="height:50px;"> <div>42</div> </div>
+        <div style="height:50px;"> <div>43</div> </div>
+        <div style="height:50px;"> <div>44</div> </div>
+        <div style="height:50px;"> <div>45</div> </div> 
+        <div style="height:50px;"> <div>46</div> </div>
+        <div style="height:50px;"> <div>47</div> </div>
+        <div style="height:50px;"> <div>48</div> </div>
+        <div style="height:50px;"> <div>49</div> </div>
+        <div style="height:50px;"> <div>50</div> </div>
+        <div style="height:50px;"> <div>51</div> </div>
+        <div style="height:50px;"> <div>52</div> </div>
+        <div style="height:50px;"> <div>53</div> </div>
+        <div style="height:50px;"> <div>54</div> </div>
+        <div style="height:50px;"> <div>55</div> </div>
+        <div style="height:50px;"> <div>56</div> </div>
+        <div style="height:50px;"> <div>57</div> </div>
+        <div style="height:50px;"> <div>58</div> </div>
+        <div style="height:50px;"> <div>59</div> </div>
+        <div style="height:50px;"> <div>60</div> </div>
+        <div style="height:50px;"> <div>61</div> </div>
+        <div style="height:50px;"> <div>62</div> </div>
+        <div style="height:50px;"> <div>63</div> </div>
+        <div style="height:50px;"> <div>64</div> </div>
+        <div style="height:50px;"> <div>65</div> </div>
+        <div style="height:50px;"> <div>66</div> </div>
+        <div style="height:50px;"> <div>67</div> </div>
+        <div style="height:50px;"> <div>68</div> </div>
+        <div style="height:50px;"> <div>69</div> </div>
+        <div style="height:50px;"> <div>70</div> </div>
+        <div style="height:50px;"> <div>71</div> </div>
+        <div style="height:50px;"> <div>72</div> </div>
+        <div style="height:50px;"> <div>73</div> </div>
+        <div style="height:50px;"> <div>74</div> </div>
+        <div style="height:50px;"> <div>75</div> </div>
+        <div style="height:50px;"> <div>76</div> </div>
+        <div style="height:50px;"> <div>77</div> </div>
+        <div style="height:50px;"> <div>78</div> </div>
+        <div style="height:50px;"> <div>79</div> </div>
+        <div style="height:50px;"> <div>80</div> </div>
+
+      </div>
+</body>
+</html>
+</html>
