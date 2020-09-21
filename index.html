@@ -3,136 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        div#grid_container{
-            width:500px;
-            margin:0px auto;
-            height:400px;
-        }
-        div#grid_container > div{
-            position:absolute;
-            width: 50px;
-            border: #000 1px solid;
-        }
-        div#grid_container > div:nth-child(2n+0) {
-            background: #FFDC64;
-        }
-        div#grid_container > div:nth-child(2n+1) {
-            background: #FFDC64;
-        }
-        div#grid_container > div > div{ padding: 20px; font-size: 27px; color:#D9A800; }
-        </style>
-        <script>
-            function renderGrid(){
-                var blocks = document.getElementById("grid_container").children;
-                var pad = 8, cols = 10, newleft, newtop;
-                for(var i = 1; i < blocks.length; i++){
-                    if (i % cols == 0) {
-                        newtop = (blocks[i-cols].offsetTop + blocks[i-cols].offsetHeight) + pad;
-                        blocks[i].style.top = newtop+"px";
-                    } else {
-                        if(blocks[i-cols]){
-                            newtop = (blocks[i-cols].offsetTop + blocks[i-cols].offsetHeight) + pad;
-                            blocks[i].style.top = newtop+"px";
-                        }
-                        newleft = (blocks[i-1].offsetLeft + blocks[i-1].offsetWidth) + pad;
-                        blocks[i].style.left = newleft+"px";	
-                    }
-                }
-            }
-            window.addEventListener("load", renderGrid, false);
-            window.addEventListener("resize", renderGrid, false);
-        </script>
-        <script>
-            var numeroApuntar;
-            numeroApuntar = prompt('A que numero desea disparar?:');
-        </script>
+    <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
 <body>
     <div id="grid_container" >
-        <div style="height:50px;"> <div>1</div> </div>
-        <div style="height:50px;"> <div>2</div> </div>
-        <div style="height:50px;"> <div>3</div> </div>
-        <div style="height:50px;"> <div>4</div> </div>
-        <div style="height:50px;"> <div>5</div> </div>
-        <div style="height:50px;"> <div>6</div> </div>
-        <div style="height:50px;"> <div>7</div> </div>
-        <div style="height:50px;"> <div>8</div> </div>
-        <div style="height:50px;"> <div>9</div> </div>
-        <div style="height:50px;"> <div>10</div> </div>
-        <div style="height:50px;"> <div>11</div> </div>
-        <div style="height:50px;"> <div>12</div> </div>
-        <div style="height:50px;"> <div>13</div> </div>
-        <div style="height:50px;"> <div>14</div> </div>
-        <div style="height:50px;"> <div>15</div> </div>
-        <div style="height:50px;"> <div>16</div> </div>
-        <div style="height:50px;"> <div>17</div> </div>
-        <div style="height:50px;"> <div>18</div> </div>
-        <div style="height:50px;"> <div>19</div> </div>
-        <div style="height:50px;"> <div>20</div> </div>
-        <div style="height:50px;"> <div>21</div> </div>
-        <div style="height:50px;"> <div>22</div> </div>
-        <div style="height:50px;"> <div>23</div> </div>
-        <div style="height:50px;"> <div>24</div> </div>
-        <div style="height:50px;"> <div>25</div> </div>
-        <div style="height:50px;"> <div>26</div> </div>
-        <div style="height:50px;"> <div>27</div> </div>
-        <div style="height:50px;"> <div>28</div> </div>
-        <div style="height:50px;"> <div>29</div> </div>
-        <div style="height:50px;"> <div>30</div> </div>
-        <div style="height:50px;"> <div>31</div> </div>
-        <div style="height:50px;"> <div>32</div> </div>
-        <div style="height:50px;"> <div>33</div> </div>
-        <div style="height:50px;"> <div>34</div> </div>
-        <div style="height:50px;"> <div>35</div> </div>
-        <div style="height:50px;"> <div>36</div> </div>
-        <div style="height:50px;"> <div>37</div> </div>
-        <div style="height:50px;"> <div>38</div> </div>
-        <div style="height:50px;"> <div>39</div> </div>
-        <div style="height:50px;"> <div>40</div> </div>
-        <div style="height:50px;"> <div>41</div> </div>
-        <div style="height:50px;"> <div>42</div> </div>
-        <div style="height:50px;"> <div>43</div> </div>
-        <div style="height:50px;"> <div>44</div> </div>
-        <div style="height:50px;"> <div>45</div> </div> 
-        <div style="height:50px;"> <div>46</div> </div>
-        <div style="height:50px;"> <div>47</div> </div>
-        <div style="height:50px;"> <div>48</div> </div>
-        <div style="height:50px;"> <div>49</div> </div>
-        <div style="height:50px;"> <div>50</div> </div>
-        <div style="height:50px;"> <div>51</div> </div>
-        <div style="height:50px;"> <div>52</div> </div>
-        <div style="height:50px;"> <div>53</div> </div>
-        <div style="height:50px;"> <div>54</div> </div>
-        <div style="height:50px;"> <div>55</div> </div>
-        <div style="height:50px;"> <div>56</div> </div>
-        <div style="height:50px;"> <div>57</div> </div>
-        <div style="height:50px;"> <div>58</div> </div>
-        <div style="height:50px;"> <div>59</div> </div>
-        <div style="height:50px;"> <div>60</div> </div>
-        <div style="height:50px;"> <div>61</div> </div>
-        <div style="height:50px;"> <div>62</div> </div>
-        <div style="height:50px;"> <div>63</div> </div>
-        <div style="height:50px;"> <div>64</div> </div>
-        <div style="height:50px;"> <div>65</div> </div>
-        <div style="height:50px;"> <div>66</div> </div>
-        <div style="height:50px;"> <div>67</div> </div>
-        <div style="height:50px;"> <div>68</div> </div>
-        <div style="height:50px;"> <div>69</div> </div>
-        <div style="height:50px;"> <div>70</div> </div>
-        <div style="height:50px;"> <div>71</div> </div>
-        <div style="height:50px;"> <div>72</div> </div>
-        <div style="height:50px;"> <div>73</div> </div>
-        <div style="height:50px;"> <div>74</div> </div>
-        <div style="height:50px;"> <div>75</div> </div>
-        <div style="height:50px;"> <div>76</div> </div>
-        <div style="height:50px;"> <div>77</div> </div>
-        <div style="height:50px;"> <div>78</div> </div>
-        <div style="height:50px;"> <div>79</div> </div>
-        <div style="height:50px;"> <div>80</div> </div>
+        <h1>Matar a los zombies</h1>
+        <hr>
+        <h3>No todos los cuadros tienen zombies!</h3>
+        <div id="zombies"></div>
+        <hr>
+        <div>
+            <button style="height:50px; width:50px;" id="n1"> 4 </button>
+            <button style="height:50px; width:50px;" id="n2"> 9 </button>
+            <button style="height:50px; width:50px;" id="n3"> 1 </button>
+            <button style="height:50px; width:50px;" id="n4"> 2 </button>
+            <button style="height:50px; width:50px;" id="n5"> 3 </button>
+            <button style="height:50px; width:50px;" id="n6"> 6 </button>
+            <button style="height:50px; width:50px;" id="n7"> 8 </button>
+            <button style="height:50px; width:50px;" id="n8"> 7 </button>
+            <button style="height:50px; width:50px;" id="n9"> 0 </button>
+            <button style="height:50px; width:50px;" id="n10"> 2 </button>
+        </div>
+        <div>
+            <button style="height:50px; width:50px;" id="n11"> 5 </button>
+            <button style="height:50px; width:50px;"id="n12"> 6 </button>
+            <button style="height:50px; width:50px;" id="n13"> 4 </button>
+            <button style="height:50px; width:50px;" id="n14"> 2 </button>
+            <button style="height:50px; width:50px;" id="n15"> 7 </button>
+            <button style="height:50px; width:50px;" id="n16"> 9 </button>
+            <button style="height:50px; width:50px;" id="n17"> 0 </button>
+            <button style="height:50px; width:50px;" id="n18"> 1 </button>
+            <button style="height:50px; width:50px;" id="n19"> 0 </button>
+            <button style="height:50px; width:50px;" id="n20"> 3 </button>
+        </div>
+        <div>
+            <button style="height:50px; width:50px;" id="n21"> 8 </button>
+            <button style="height:50px; width:50px;" id="n22"> 3 </button>
+            <button style="height:50px; width:50px;" id="n23"> 4 </button>
+            <button style="height:50px; width:50px;" id="n24"> 1 </button>
+            <button style="height:50px; width:50px;" id="n25"> 5 </button>
+            <button style="height:50px; width:50px;" id="n26"> 1 </button>
+            <button style="height:50px; width:50px;" id="n27"> 0 </button>
+            <button style="height:50px; width:50px;" id="n28"> 9 </button>
+            <button style="height:50px; width:50px;" id="n29"> 6 </button>
+            <button style="height:50px; width:50px;" id="n30"> 1 </button>
+        </div>
+        <div>
+            <button style="height:50px; width:50px;" id="n31"> 4 </button>
+            <button style="height:50px; width:50px;" id="n32"> 4 </button>
+            <button style="height:50px; width:50px;" id="n33"> 2 </button>
+            <button style="height:50px; width:50px;" id="n34"> 4 </button>
+            <button style="height:50px; width:50px;" id="n35"> 7 </button>
+            <button style="height:50px; width:50px;" id="n36"> 9 </button>
+            <button style="height:50px; width:50px;" id="n37"> 3 </button>
+            <button style="height:50px; width:50px;" id="n38"> 2 </button>
+            <button style="height:50px; width:50px;" id="n39"> 1 </button>
+            <button style="height:50px; width:50px;" id="n40"> 2 </button>
+        </div>
+        <div>
+            <button style="height:50px; width:50px;" id="n41"> 7 </button>
+            <button style="height:50px; width:50px;" id="n42"> 9 </button>
+            <button style="height:50px; width:50px;" id="n43"> 5 </button>
+            <button style="height:50px; width:50px;" id="n44"> 3 </button>
+            <button style="height:50px; width:50px;" id="n45"> 6 </button>
+            <button style="height:50px; width:50px;" id="n46"> 2 </button>
+            <button style="height:50px; width:50px;" id="n47"> 4 </button>
+            <button style="height:50px; width:50px;" id="n48"> 1 </button>
+            <button style="height:50px; width:50px;" id="n49"> 2 </button>
+            <button style="height:50px; width:50px;" id="n50"> 0 </button>
+        </div>
+        <div>
+            <button style="height:50px; width:50px;" id="n51"> 1 </button>
+            <button style="height:50px; width:50px;" id="n52"> 2 </button>
+            <button style="height:50px; width:50px;" id="n53"> 3 </button>
+            <button style="height:50px; width:50px;" id="n54"> 7 </button>
+            <button style="height:50px; width:50px;" id="n55"> 0 </button>
+            <button style="height:50px; width:50px;" id="n56"> 9 </button>
+            <button style="height:50px; width:50px;" id="n57"> 5 </button>
+            <button style="height:50px; width:50px;" id="n58"> 4 </button>
+            <button style="height:50px; width:50px;" id="n59"> 3 </button>
+            <button style="height:50px; width:50px;" id="n60"> 2 </button>
+        </div>
+        <div>
+            <button style="height:50px; width:50px;" id="n61"> 4 </button>
+            <button style="height:50px; width:50px;" id="n62"> 5 </button>
+            <button style="height:50px; width:50px;" id="n63"> 7 </button>
+            <button style="height:50px; width:50px;" id="n64"> 8 </button>
+            <button style="height:50px; width:50px;" id="n65"> 4 </button>
+            <button style="height:50px; width:50px;" id="n66"> 1 </button>
+            <button style="height:50px; width:50px;" id="n67"> 2 </button>
+            <button style="height:50px; width:50px;" id="n68"> 3 </button>
+            <button style="height:50px; width:50px;" id="n69"> 0 </button>
+            <button style="height:50px; width:50px;" id="n70"> 9 </button>
+        </div>
+        <div>
+            <button style="height:50px; width:50px;" id="n71"> 1 </button>
+            <button style="height:50px; width:50px;" id="n72"> 2 </button>
+            <button style="height:50px; width:50px;" id="n73"> 0 </button>
+            <button style="height:50px; width:50px;" id="n74"> 1 </button>
+            <button style="height:50px; width:50px;" id="n75"> 7 </button>
+            <button style="height:50px; width:50px;" id="n76"> 9 </button>
+            <button style="height:50px; width:50px;" id="n77"> 8 </button>
+            <button style="height:50px; width:50px;" id="n78"> 4 </button>
+            <button style="height:50px; width:50px;" id="n79"> 3 </button>
+            <button style="height:50px; width:50px;" id="n80"> 0 </button>
+        </div>
 
       </div>
+
+      <script src="main.js"></script>
 </body>
 </html>
 </html>
